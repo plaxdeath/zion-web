@@ -9,7 +9,7 @@
 
     <style>
         body { 
-            background-color: #000; /* Fondo negro profundo */
+            background-color: #000; 
             color: #fff; 
             font-family: monospace; 
             text-align: center;
@@ -17,7 +17,6 @@
             padding: 20px;
         }
 
-        /* Tu Logo */
         .main-logo {
             width: 100%;
             max-width: 800px;
@@ -25,7 +24,6 @@
             margin: 0 auto 20px auto;
         }
 
-        /* Contenedor de los Botones */
         nav {
             margin: 40px 0;
             display: flex;
@@ -34,9 +32,8 @@
             flex-wrap: wrap; 
         }
 
-        /* Estilo Gótico Industrial */
         nav a {
-            font-family: 'UnifrakturCook', serif; /* La fuente que elegimos */
+            font-family: 'UnifrakturCook', serif; 
             color: #ffffff; 
             text-decoration: none; 
             font-size: 2.2rem; 
@@ -45,11 +42,50 @@
             padding: 5px 10px;
         }
 
-        /* El efecto al pasar el mouse */
         nav a:hover {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Brillo sutil */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); 
             transform: scale(1.05); 
             cursor: crosshair;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: 'UnifrakturCook', serif;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+
+        .grid-galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .grid-galeria img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid #222;
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
+
+        .grid-galeria img:hover {
+            filter: grayscale(0%);
+            border-color: #fff;
+        }
+
+        .prototipo-box {
+            border: 1px dashed #444;
+            padding: 20px;
+            background: rgba(10, 10, 10, 0.5);
         }
     </style>
 </head>
@@ -59,47 +95,51 @@
 
     <nav>
         <a href="#artista">ARTISTA</a>
-        <a href="#tatuajes">TATUAJES</a>
-        <a href="#disenos">DISEÑOS</a>
+        <a href="#tatuajes">TRABAJOS</a>
         <a href="#flashes">FLASHES</a>
         <a href="#merch">MERCH</a>
     </nav>
-<section id="artista" style="max-width: 800px; margin: 60px auto; padding: 40px; border: 1px double #333; background: rgba(10, 10, 10, 0.8);">
-        
-        <h2 style="font-family: 'UnifrakturCook', serif; font-size: 3rem; color: #fff; margin-bottom: 30px; letter-spacing: 3px;">
-            Identidad
-        </h2>
 
-        <p style="font-family: monospace; font-size: 1.2rem; line-height: 1.6; color: #ccc; text-align: justify; border-left: 3px solid #fff; padding-left: 20px;">
+    <section id="artista" style="max-width: 800px; border: 1px double #333; background: rgba(10, 10, 10, 0.8);">
+        <h2 style="margin-bottom: 30px;">Identidad</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6; color: #ccc; text-align: justify; border-left: 3px solid #fff; padding-left: 20px;">
             Dibujante y tatuador formado en la vieja escuela, aprendiendo a través de la disciplina y la tradición. 
             <br><br>
             Hoy mi búsqueda se funde entre lo orgánico y lo tecnológico: <span style="color: #fff; font-weight: bold;">Blackwork, biomecánica ciber-orgánica y horror.</span>
         </p>
-
     </section>
-<section id="tatuajes" style="max-width: 1000px; margin: 80px auto; padding: 20px;">
-        
-        <h2 style="font-family: 'UnifrakturCook', serif; font-size: 3rem; color: #fff; margin-bottom: 40px; letter-spacing: 3px;">
-            Trabajos
-        </h2>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-            
-            <img src="tatuajes/01.jpeg" alt="Tatuaje 1" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: 0.5s;">
-            
-            <img src="tatuajes/02.jpeg" alt="Tatuaje 2" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: 0.5s;">
-            
-            <img src="tatuajes/03.jpeg" alt="Tatuaje 3" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: 0.5s;">
-            
-            <img src="tatuajes/04.jpeg" alt="Tatuaje 4" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: 0.5s;">
-            
-            <img src="tatuajes/05.jpeg" alt="Tatuaje 5" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: 0.5s;">
-            
-            <img src="tatuajes/06.jpeg" alt="Tatuaje 6" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid #333; filter: grayscale(100%); transition: 0.5s;">
-
+    <section id="tatuajes">
+        <h2>Trabajos</h2>
+        <div class="grid-galeria">
+            <img src="tatuajes/01.jpeg" alt="Tatuaje 1">
+            <img src="tatuajes/02.jpeg" alt="Tatuaje 2">
+            <img src="tatuajes/03.jpeg" alt="Tatuaje 3">
+            <img src="tatuajes/04.jpeg" alt="Tatuaje 4">
+            <img src="tatuajes/05.jpeg" alt="Tatuaje 5">
+            <img src="tatuajes/06.jpeg" alt="Tatuaje 6">
         </div>
+    </section>
 
+    <section id="flashes">
+        <h2>Flashes Disponibles</h2>
+        <div class="grid-galeria">
+            <img src="1.jpg" alt="Flash 1">
+            <img src="2.jpg" alt="Flash 2">
+            <img src="3.jpg" alt="Flash 3">
+            <img src="4.jpg" alt="Flash 4">
+        </div>
+    </section>
+
+    <section id="merch">
+        <h2>Merch</h2>
+        <div class="prototipo-box">
+            <p style="color: #666; margin-bottom: 20px;">[ PROTOTYPE_v01.sh ]</p>
+            <img src="remera.jpg" alt="Prototipo Remera" style="max-width: 400px; width: 100%; border: 1px solid #333;">
+            <p style="margin-top: 20px; color: #888;">Indumentaria experimental - Próximamente en La Terminal.</p>
+        </div>
     </section>
 
 </body>
 </html>
+
